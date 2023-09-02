@@ -54,7 +54,7 @@ class Solution:
         # the more min-distance each point has, the lower probability for mutation it has
         weights = 1 - (self.min_distances / self.min_distances.sum())
         # make n/2 choices from 1 to n-1 (to avoid changing fixed point) according to weights
-        choices = random.choices(population=range(1, self.n), weights=weights[1:], k=self.n//2)
+        choices = random.choices(population=range(1, self.n), weights=weights[1:], k=self.n // 2)
         for i in choices:
             p = self.points[i]
             p.r = (p.r + random.gauss(mu=0, sigma=r_sigma)) % 1
@@ -83,13 +83,16 @@ class Solution:
             s += f'{math.sqrt(d):.2f} \n'
         return s
 
-    def plot(self):
+    def plot(self, show=True, savefig=False):
         fig, ax = plt.subplots(subplot_kw={'projection': 'polar'}, figsize=(10, 10))
         ax.set_ylim(0, 1)
-        plt.suptitle(f"Solution for n = {self.n}, fitness: {self.fitness:.6f}", fontsize=25)
+        plt.suptitle(f"Solution for n = {self.n}, fitness: {math.sqrt(self.fitness):.6f}", fontsize=25)
         for p in self.points:
             plt.plot(p.theta, p.r, 'o', color='orange', markersize=10)
-        plt.show()
+        if savefig:
+            plt.savefig(f"outputs/solution-{self.n}.png")
+        if show:
+            plt.show()
 
     def __str__(self):
         return f'{self.n}-points, fitness: {self.fitness:.3f}'
