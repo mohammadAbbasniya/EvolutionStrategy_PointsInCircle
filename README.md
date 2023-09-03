@@ -50,6 +50,8 @@ In computer science, an evolution strategy (ES) is an optimization technique bas
     <td> <img alt="solution-4" width="300" src="https://github.com/mohammadAbbasniya/EvolutionStrategy_PointsInCircle/blob/main/outputs/solution-4.png"> </td>
     <td> <img alt="solution-5" width="300" src="https://github.com/mohammadAbbasniya/EvolutionStrategy_PointsInCircle/blob/main/outputs/solution-5.png"> </td>
   </tr>
+</table>
+<table align='center'>
   <tr style='background-color: white;'>
     <td> <img alt="solution-6" width="300" src="https://github.com/mohammadAbbasniya/EvolutionStrategy_PointsInCircle/blob/main/outputs/solution-6.png"> </td>
     <td> <img alt="solution-7" width="300" src="https://github.com/mohammadAbbasniya/EvolutionStrategy_PointsInCircle/blob/main/outputs/solution-7.png"> </td>
